@@ -23,36 +23,58 @@
 
 <body>
 
-    <!-- Nav Bar Inside a Fluid Container -->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
+    <!-- Nav Bar Inside a Fluid Container. Needs to be col-lrg-8 col-md -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="row container-fluid col-lrg-8 col-md-8 col-xs-12 ">
+            <a class="navbar-brand" href="#">Jeremy Muniak</a>
             <!-- Brand and toggle get grouped for better display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapse" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
-                    <!-- removed --- aria-label="Toggle navigation"> -->
+            <div class="row navbar-header col-xs-8 col-md-4">
+                <span class="navbar-right" type="button" data-toggle="navbar" data-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="navbar navigation">
+                </span>
+                <!--                 
                     <span class="sr-only">Toggle navigation"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <span class="icon-bar"></span> -->
                 </button>
-                <a class="navbar-brand" href="#"> Jeremy Muniak</a>
+
             </div>
 
 
             <!-- Collecting nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-right col-lrg-4 col-md-4 col-xs-12" id="navbarSupportedContent">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a class="nav-link" href="#">About Me </a></li>
                     <li><a class="nav-link" href="#">Portfolio </a></li>
                     <li><a class="nav-link" href="#">Contact </a></li>
                 </ul>
-            </div>   <!-- /.navbar-collapse-->
-        </div>    <!-- /.container-fluid-->
+            </div> <!-- /.navbar-collapse-->
+        </div> <!-- /.container-fluid-->
     </nav>
-
     <!-- End Nav Bar -->
+
+
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <div class="row">
+            <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8 Ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cupiditate vitae obcaecati aliquid. Commodi magnam consectetur, quos illum, distinctio alias aspernatur, sequi exercitationem harum earum ipsam pariatur sed accusantium inventore.</div>
+            <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquam obcaecati odit quas repellendus, exercitationem fuga! Possimus nostrum eius est. Enim provident expedita ducimus similique doloribus architecto incidunt magni minima.</div>
+        </div>
+    
+        <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+        <div class="row">
+            <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, nisi, distinctio repellendus facere dolor quas numquam harum nobis amet nulla non optio minus provident soluta ea in perspiciatis, rerum quae.
+            </div>
+            <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam impedit quia itaque enim praesentium ratione minus. Consequatur nobis quae explicabo harum aspernatur ex commodi, minima, repudiandae, sequi deserunt quisquam esse!</div>
+            <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet est deserunt aliquam, nulla inventore enim nemo tenetur atque rem, ullam vero laboriosam repellat sequi temporibus sunt odit doloremque repellendus quos!</div>
+        </div>
+    
+        <!-- Columns are always 50% wide, on mobile and desktop -->
+        <div class="row">
+            <div class="col-xs-6">.col-xs-6 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam odio culpa neque quae ratione voluptatum doloremque repellendus perspiciatis tenetur quasi quam vero accusamus atque accusantium eaque, ea, eius voluptates voluptatem!</div>
+            <div class="col-xs-6">.col-xs-6 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto in dolorem laudantium maxime sunt. Voluptas doloribus ipsam illum corrupti quis sit sapiente cum porro tempore delectus amet ab, perferendis enim?</div>
+        </div>
+    
 
     <!-- // Extra small devices (portrait phones, less than 576px) -->
     <!-- // No media query for `xs` since this is the default in Bootstrap -->
@@ -70,24 +92,6 @@
     <!-- @media (min-width: 1200px) { ... } -->
 
 
-    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
-    <div class="row">
-        <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-    </div>
-
-    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-    <div class="row">
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-    </div>
-
-    <!-- Columns are always 50% wide, on mobile and desktop -->
-    <div class="row">
-        <div class="col-xs-6">.col-xs-6</div>
-        <div class="col-xs-6">.col-xs-6</div>
-    </div>
 
 
 
@@ -95,7 +99,7 @@
 
 
     <!-- Sticky Footer -->
-    <footer class="footer mt-auto py-3">
+    <footer class="footer fixed-bottom mt-auto py-3">
         <div class="container">
             <span class="text-muted">Place sticky footer content here.</span>
         </div>
