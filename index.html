@@ -18,88 +18,58 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+    <!-- This is outside the scope of the media queries lesson but also a cool thing to know, you can define separate external .css sheets and link them based on screen size. Example:
+<link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
+<link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css"> -->
+    <link rel="stylesheet" type="text/css" href="./Style.css">
+
     <title>Document</title>
 </head>
 
 <body>
 
-    <!-- Nav Bar Inside a Fluid Container. -->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-md-4 col-lg-4">
-                <div class="navbar-brand navbar-">
-                    <div class="nav navbar navbar-nav">
-                        Jeremy Muniak
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-4 col-lg-4"></div>
-            <ul class="nav justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Active</a>
+    <!-- The Nav tag could be a Div but HTML5 standards and bootstrap docs give the nav tag. 
+    The class is navbar, navbar-light describes color, bg-light says the background will be light so make the text dark,
+    bg-light makes the background a light color. 
+    navbar-expand-lg tells the navbar that we want to break this apart horizontally in a large screen
+    the fixed-top "utility" keeps the nav bar at the top of the viewport while things scroll under it. -->
+    <nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top">
+        <!-- navbar-brand Makes the text slightly different. -->
+        <a href="#" class="navbar-brand">My Website</a>
+        <!-- the button class is ="navbar-toggler" data-toggle="collapse" data-tagrget=#navbarCollapse 
+                    [keep in mind; data-toggle needs to ="collapse" for bootstrap to work, 
+                    you need to create a data toggle and data target, the target is pointing to the id, 
+                    which will contain the unordered list that collapses into the button.] -->
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <!-- This span class of ="navbar-toggler-icon" gives the burger menu on smaller screens. -->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        <!-- This class is =collapse navbar-collapse in order to make the li collapse into a button, 
+                    that is the above class =button -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <!-- The class is navbar-nav to tell bootstrap it will be navigation links. 
+                        ml-auto stands for "margin left: auto;" -->
+            <ul class="navbar-nav ml-auto">
+                <!-- List items need to have a class of navbar-item -->
+                <li class="navbar-item">
+                    <!-- anchor tags need to have a class of nav-link -->
+                    <a href="#" class="nav-link">Homepage</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                <li class="navbar-item">
+                    <a href="#" class="nav-link">Blog</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                <li class="navbar-item">
+                    <a href="#" class="nav-link">About Me</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
+                <li class="navbar-item">
+                    <a href="#" class="nav-link">Contact</a>
                 </li>
             </ul>
+            <!--ends the  unordered list-->
         </div>
-        <!--./end row-->
-    </div>
-    <!--./end container-fluid -->
-
-
-
-    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
-    <div class="row">
-        <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8
-            <h2>About Me <i class="fas fa-user-astronaut"></i></h2>
-            <hr>
-            <img style="float:left;max-width:100px;height:auto;margin-right:5px;" src="./assets/images/linkedinpic.jpeg" alt="My Face">
-            <p class="gray">My name is Jeremy Muniak, I'm a professional recruiter from Portland, ME with an interested in full stack dev, product dev, and gaming. I grew up on a small island farm in Casco Bay and love sailing and boating but I actually hate seafood
-                despite being an islander.
-            </p>
-        </div>
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4 I have experience in both technical and executive talent acquisiton, software sales, insurance sales, and I'm new to Full Stack Dev but enjoy it immensely(so far). I've found Dev work to be akin to woodworking in the sense
-            that you're able to see your work come to life and get instant tangible results through problem solving.
-            </p>
-        </div>
-    </div>
-
-    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-    <div class="row">
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4 My hobbies include; disc golfing, making cold brew, board sports, video games, wood working, grilling, comedy shows, science fiction. I have built a gaming PC and have a flight simulator set up at home so I can fly spaceships
-            in Star Citizen when I have free time.
-            </p>
-        </div>
-        <br>
-        <br>
-        <br>
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam impedit quia itaque enim praesentium ratione minus. Consequatur nobis quae explicabo harum aspernatur ex commodi, minima, repudiandae, sequi deserunt quisquam
-            esse!
-        </div>
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet est deserunt aliquam, nulla inventore enim nemo tenetur atque rem, ullam vero laboriosam repellat sequi temporibus sunt odit doloremque repellendus quos!</div>
-    </div>
-
-    <!-- Columns are always 50% wide, on mobile and desktop -->
-    <div class="row">
-        <div class="col-xs-6">.col-xs-6 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam odio culpa neque quae ratione voluptatum doloremque repellendus perspiciatis tenetur quasi quam vero accusamus atque accusantium eaque, ea, eius voluptates voluptatem!</div>
-        <div class="col-xs-6">.col-xs-6 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto in dolorem laudantium maxime sunt. Voluptas doloribus ipsam illum corrupti quis sit sapiente cum porro tempore delectus amet ab, perferendis enim?</div>
-    </div>
-
-
-
-    <!-- Sticky Footer -->
-    <footer class="footer fixed-bottom mt-auto py-3">
-        <div class="container">
-            <span class="text-muted">Place sticky footer content here.</span>
-        </div>
-    </footer>
+        <!--ends the collapes navbar-collapse class-->
+    </nav>
+    <!--ends the navbar-->
 
 
 </body>
