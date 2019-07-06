@@ -1,17 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <!-- Bootstrap CSS Link -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- This is outside the scope of the media queries lesson but also a cool thing to know, you can define separate external .css sheets and link them based on screen size. Example:
+<link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
+<link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css"> -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+
+    <title>Portfolio</title>
 </head>
+
 <body>
-    
+    <!-- The Nav tag could be a Div but HTML5 standards and bootstrap docs give the nav tag. 
+    The class is navbar, navbar-light describes color, bg-light says the background will be light so make the text dark,
+    bg-light makes the background a light color. 
+    navbar-expand-lg tells the navbar that we want to break this apart horizontally in a large screen
+    the fixed-top "utility" keeps the nav bar at the top of the viewport while things scroll under it. -->
+    <nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top">
+        <!-- navbar-brand Makes the text slightly different. -->
+        <a href="#" class="navbar-brand">Jeremy Muniak</a>
+        <!-- the button class is ="navbar-toggler" data-toggle="collapse" data-tagrget=#navbarCollapse 
+                    [keep in mind; data-toggle needs to ="collapse" for bootstrap to work, 
+                    you need to create a data toggle and data target, the target is pointing to the id, 
+                    which will contain the unordered list that collapses into the button.] -->
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <!-- This span class of ="navbar-toggler-icon" gives the burger menu on smaller screens. -->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- This class is =collapse navbar-collapse in order to make the li collapse into a button, 
+                    that is the above class =button -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <!-- The class is navbar-nav to tell bootstrap it will be navigation links. 
+                        ml-auto stands for "margin left: auto;" -->
+            <ul class="navbar-nav ml-auto">
+                <!-- List items need to have a class of navbar-item -->
+                <li class="navbar-item">
+                    <!-- anchor tags need to have a class of nav-link -->
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="nav-link">Portfolio</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <!--ends the  unordered list-->
+        </div>
+        <!--ends the collapes navbar-collapse class-->
+    </nav>
+    <!--ends the navbar-->
 
 
 
+    <div class="ContactContainer">
+        <h2>Contact Me</h2>
+        <form action="/action_page.php">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-    
+            <label for="email">Email</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your email..">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <br>
+    <br>
+
+    <div>
+        <footer>Copywrite Jeremy Muniak</footer>
+    </div>
 </body>
+
+
+</body>
+
 </html>

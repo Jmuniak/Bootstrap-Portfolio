@@ -21,13 +21,12 @@
     <!-- This is outside the scope of the media queries lesson but also a cool thing to know, you can define separate external .css sheets and link them based on screen size. Example:
 <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
 <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css"> -->
-    <link rel="stylesheet" type="text/css" href="./Style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
 
-    <title>Document</title>
+    <title>Portfolio</title>
 </head>
 
 <body>
-
     <!-- The Nav tag could be a Div but HTML5 standards and bootstrap docs give the nav tag. 
     The class is navbar, navbar-light describes color, bg-light says the background will be light so make the text dark,
     bg-light makes the background a light color. 
@@ -35,15 +34,15 @@
     the fixed-top "utility" keeps the nav bar at the top of the viewport while things scroll under it. -->
     <nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top">
         <!-- navbar-brand Makes the text slightly different. -->
-        <a href="#" class="navbar-brand">My Website</a>
+        <a href="index.html" class="navbar-brand">Jeremy Muniak</a>
         <!-- the button class is ="navbar-toggler" data-toggle="collapse" data-tagrget=#navbarCollapse 
                     [keep in mind; data-toggle needs to ="collapse" for bootstrap to work, 
                     you need to create a data toggle and data target, the target is pointing to the id, 
                     which will contain the unordered list that collapses into the button.] -->
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <!-- This span class of ="navbar-toggler-icon" gives the burger menu on smaller screens. -->
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <!-- This span class of ="navbar-toggler-icon" gives the burger menu on smaller screens. -->
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <!-- This class is =collapse navbar-collapse in order to make the li collapse into a button, 
                     that is the above class =button -->
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -53,16 +52,13 @@
                 <!-- List items need to have a class of navbar-item -->
                 <li class="navbar-item">
                     <!-- anchor tags need to have a class of nav-link -->
-                    <a href="#" class="nav-link">Homepage</a>
+                    <a href="index.html" class="nav-link">About</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="#" class="nav-link">Blog</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="#" class="nav-link">About Me</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
                 </li>
             </ul>
             <!--ends the  unordered list-->
@@ -72,6 +68,37 @@
     <!--ends the navbar-->
 
 
+    <div class="AboutMeContainer">
+        <h2>About Me <i class="fas fa-user-astronaut"></i></h2>
+        <hr>
+        <img style="float:left;max-width:100px;height:auto;margin-right:5px;" src="./assets/images/linkedinpic.jpeg"
+          alt="My Face">
+        <p class="gray">My name is Jeremy Muniak, I'm a professional recruiter from Portland, ME with an interested in full
+          stack dev, product dev, and gaming. I grew up on a small island farm in Casco Bay and love sailing and boating but
+          I actually hate seafood despite being an islander.
+        </p>
+        <p class="gray">I have experience in both technical and executive talent acquisiton, software sales, insurance
+          sales, and I'm new to Full Stack Dev but enjoy it immensely(so far). I've found Dev work to be akin to woodworking
+          in the sense that you're able to see your work come to life and get instant tangible results through problem
+          solving.
+        </p>
+        <p class="gray">My hobbies include; disc golfing, making cold brew, board sports, video games, wood working,
+          grilling, comedy shows, science fiction. I have built a gaming PC and have a flight simulator set up at home so I
+          can fly spaceships in Star Citizen when I have free time.
+        </p>
+      </div>
+      <br>
+      <br>
+
+
+
+
+    <!-- Sticky Footer -->
+    <footer class="footer fixed-bottom mt-auto py-3">
+        <div class="container">
+            <span class="footer">Place sticky footer content here.</span>
+        </div>
+    </footer>
 </body>
 
 </html>
