@@ -28,17 +28,6 @@
     flex-grow: 1;
    }
 
-/*   
-  nav a, nav ul, nav li {
-    float: right;
-    text-decoration: none;
-    list-style-type: none;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    padding: 2px; 
-  } */
-
-  
   hr {
     margin: 25px 0;
   }
@@ -53,10 +42,7 @@
   
  
 
-  /* Banner? Name and Nav?
-   Need to recheck what these are and what is going on here.*/
-
-/* Content width in header? wha is this?*/
+  /* Name */
   
   a.navbar-brand {
     display: inline-block;
@@ -116,8 +102,35 @@
   /* end of contact form */
 
   
+
+
+
+
   /* Portfolio Gallery general section. 
   This needs more work. */
+
+  /* Imported from responsive page */
+
+  /* Gallery styling */
+  .portfolio-exampleImage {
+    display: inline-block;
+    width: calc(100% / 3 - 33px);
+      max-width: 200px;
+    margin: 0 5px;
+    position: relative;
+  }
+  
+  .portfolio-exampleImage {
+      max-width: 100%;
+    }
+  
+  .examples-container {
+      text-align: center;
+  }
+  /*end of import from responsive page  */
+
+
+
   div.PortfolioContainer {
     max-width: 960px;
     margin: 0 auto;
@@ -132,7 +145,7 @@
   div.portfolio-exampleImage {
     display: inline-block;
     width: calc(100% / 3 - 33px);
-        max-width: 200px;
+    max-width: 200px;
     margin: 0 5px;
     position: relative;
   }
@@ -142,15 +155,16 @@
     }
 /* Gallery example title styling.
 this is being very tricky.*/
-  h3.pexample-label {
+h3.pexample-label {
     position: absolute;
     display: block;
     bottom: 15px;
-    max-width: 100%;
+    width: 200px;
     text-align: center;
     color: #fff;
     background: #4aaaa5;
   }
+
   
   
   
@@ -168,20 +182,25 @@ this is being very tricky.*/
     text-align: center;
     color: black;
   }
-  
-  
-    /*
-    Media Querries! 
-    These rules take effect when the browser's width
-    is changed.
-    Need to work on the navigaion menu centering under the name. Also need to work on Portfolio page. Refer to Darnoc. 
-    */
-    @media screen and (max-width: 766px) {
-        .navbar-brand {
+
+
+ /*
+ Media Querries! 
+These rules take effect when the browser's width is changed.
+Need to work on Portfolio page. Refer to Darnoc. */
+  @media screen and (max-width: 766px) {
+        a.navbar-brand {
             display: block;
             width: 75%;
         }
     }
+
+
+  @media screen and (min-width: 759px) {
+    .portfolio-example {
+        width: calc(100% / 3 - 3px);
+    }
+}
 
   @media screen and (max-width: 640px) {
    /* navbar-brand, my name block filling more of the space nicely*/
@@ -189,6 +208,21 @@ this is being very tricky.*/
     display: block;
     width: 75%;
 }
+  
+
+
+  /* Portfolio. Needs work still. */
+  div.portfolio-example {
+    width: 100%;
+  }
+  
+  div.portfolio-example {
+    display: block;
+    width: 299px;
+    align-content: center;
+    margin: 15px auto;
+    position: relative;
+  }
   
   /* About me */
   .AboutMeContainer h2 {
@@ -204,22 +238,17 @@ this is being very tricky.*/
   }
 
  /* Contact form is fine as is. */
-
  
+  }
 
-  /* Portfolio. Needs work still. */
-  div.portfolio-example {
-    width: 100%;
-  }
-  
-  div.portfolio-example {
-    display: block;
-    width: 100%;
-    margin: 0% auto;
-    position: absolute;
-  }
-  
-  }
+  @media screen and (min-width: 500px) {
+    .portfolio-example {
+        display: inline-block;
+        width: calc(100% / 2 - 2px);
+        margin: 15px;
+    }
+    
+}
 
 
 
