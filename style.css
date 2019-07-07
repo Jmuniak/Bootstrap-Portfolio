@@ -176,7 +176,13 @@ this is being very tricky.*/
     is changed.
     Need to work on the navigaion menu centering under the name. Also need to work on Portfolio page. Refer to Darnoc. 
     */
-  
+    @media screen and (max-width: 766px) {
+        .navbar-brand {
+            display: block;
+            width: 75%;
+        }
+    }
+
   @media screen and (max-width: 640px) {
    /* navbar-brand, my name block filling more of the space nicely*/
    a.navbar-brand {
