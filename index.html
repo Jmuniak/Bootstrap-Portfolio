@@ -9,14 +9,6 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <!-- This is outside the scope of the media queries lesson but also a cool thing to know, you can define separate external .css sheets and link them based on screen size. Example:
 <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
@@ -27,66 +19,80 @@
 </head>
 
 <body>
-    <!-- The Nav tag could be a Div but HTML5 standards and bootstrap docs give the nav tag. 
+    <!-- The Nav tag could be a Div but HTML5 standards a   nd bootstrap docs give the nav tag. 
     The class is navbar, navbar-light describes color, bg-light says the background will be light so make the text dark,
     bg-light makes the background a light color. 
     navbar-expand-lg tells the navbar that we want to break this apart horizontally in a large screen
     the fixed-top "utility" keeps the nav bar at the top of the viewport while things scroll under it. -->
-    <nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
         <!-- navbar-brand Makes the text slightly different. -->
-        <a href="index.html" class="navbar-brand">Jeremy Muniak</a>
-        <!-- the button class is ="navbar-toggler" data-toggle="collapse" data-tagrget=#navbarCollapse 
+        <div class="container">
+            <!-- Text-white is obvious but took me forever to figure out with the navbar-light/dark bg-light/dark and hamburger menu disapearing issues.  -->
+            <a class="navbar-brand text-white" href="index.html">Jeremy Muniak</a>
+            <!-- the button class is ="navbar-toggler" data-toggle="collapse" data-tagrget=#navbarCollapse 
                     [keep in mind; data-toggle needs to ="collapse" for bootstrap to work, 
                     you need to create a data toggle and data target, the target is pointing to the id, 
                     which will contain the unordered list that collapses into the button.] -->
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <!-- This span class of ="navbar-toggler-icon" gives the burger menu on smaller screens. -->
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- This class is =collapse navbar-collapse in order to make the li collapse into a button, 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- This span class of ="navbar-toggler-icon" gives the burger menu on smaller screens. -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- This class is =collapse navbar-collapse in order to make the li collapse into a button, 
                     that is the above class =button -->
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <!-- The class is navbar-nav to tell bootstrap it will be navigation links. 
-                        ml-auto stands for "margin left: auto;" -->
-            <ul class="navbar-nav ml-auto">
-                <!-- List items need to have a class of navbar-item -->
-                <li class="navbar-item">
-                    <!-- anchor tags need to have a class of nav-link -->
-                    <a href="index.html" class="nav-link">About</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="portfolio.html" class="nav-link">Portfolio</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <!--ends the  unordered list-->
+            <div class="collapse navbar-collapse justify-content-md-end" id="navbarNav">
+                <ul class="navbar-nav list-group-horizontal justify-content-around">
+                    <!-- if you replace justify-content-around with justify-content-sm-center you can achieve a similar outcome,
+                                                but there will be no margin between your list items.
+                                                you would have you add ml-1 and mr-1 to each <li>-->
+                    <!-- The class is navbar-nav to tell bootstrap it will be navigation links.-->
+
+                    <!-- List items need to have a class of nav-item -->
+                    <!-- <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">My Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" tabindex="-1">Contact Me</a>
+                    </li>
+                </ul>
+                <!--ends the  unordered list-->
+            </div>
+            <!--ends the collapes navbar-collapse class-->
         </div>
-        <!--ends the collapes navbar-collapse class-->
+        <!--ends the container -->
     </nav>
     <!--ends the navbar-->
 
+    <br>
 
-    <div class="AboutMeContainer">
+    <div class="container AboutMeContainer">
         <h2>About Me <i class="fas fa-user-astronaut"></i></h2>
         <hr>
         <img style="float:left;max-width:100px;height:auto;margin-right:5px;" src="./assets/images/linkedinpic.jpeg"
             alt="My Face">
-        <p class="gray">My name is Jeremy Muniak, I'm a professional recruiter from Portland, ME with an interested in
+        <p class="gray">My name is Jeremy Muniak, I'm a professional recruiter from Portland, ME with an interested
+            in
             full
             stack dev, product dev, and gaming. I grew up on a small island farm in Casco Bay and love sailing and
             boating but
             I actually hate seafood despite being an islander.
         </p>
-        <p class="gray">I have experience in both technical and executive talent acquisiton, software sales, insurance
-            sales, and I'm new to Full Stack Dev but enjoy it immensely(so far). I've found Dev work to be akin to
-            woodworking
-            in the sense that you're able to see your work come to life and get instant tangible results through problem
+        <p class="gray">I have experience in both technical and executive talent acquisiton, software sales,
+            insurance
+            sales, and I'm new to Full Stack Dev but enjoy it immensely. I've found Dev work to be akin to
+            woodworking in the sense that you're able to see your work come to life and get instant tangible results
+            through problem
             solving.
         </p>
         <p class="gray">My hobbies include; disc golfing, making cold brew, board sports, video games, wood working,
-            grilling, comedy shows, science fiction. I have built a gaming PC and have a flight simulator set up at home
+            grilling, comedy shows, science fiction. I have built a gaming PC and have a flight simulator set up at
+            home
             so I
             can fly spaceships in Star Citizen when I have free time.
         </p>
@@ -103,6 +109,18 @@
             <span class="footer">Place sticky footer content here.</span>
         </div>
     </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
