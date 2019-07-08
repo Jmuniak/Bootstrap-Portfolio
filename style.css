@@ -109,64 +109,29 @@
   /* Portfolio Gallery general section. 
   This needs more work. */
 
-  /* Imported from responsive page */
-
-  /* Gallery styling */
-  .portfolio-exampleImage {
-    display: inline-block;
-    width: calc(100% / 3 - 33px);
-      max-width: 200px;
-    margin: 0 5px;
-    position: relative;
-  }
-  
-  .portfolio-exampleImage {
-      max-width: 100%;
-    }
-  
-  .examples-container {
-      text-align: center;
-  }
-  /*end of import from responsive page  */
-
-
-
-  div.PortfolioContainer {
+ section.PortfolioSection {
     max-width: 960px;
     margin: 0 auto;
-    padding: 20px;
     background: white;
     border: #cccccc;
     background-color: #fff;
     color:#4aaaa5;
   }
-  /* Gallery example image styling.
-  Being tricky */
-  div.portfolio-exampleImage {
-    display: inline-block;
-    width: calc(100% / 3 - 33px);
-    max-width: 200px;
-    margin: 0 5px;
-    position: relative;
-  }
   
-  div.portfolio-exampleImage img {
-      max-width: 100%;
-    }
-/* Gallery example title styling.
-this is being very tricky.*/
+/* Gallery example title styling.*/
 h3.pexample-label {
     position: absolute;
     display: block;
-    bottom: 15px;
+    bottom: 30px;
     width: 200px;
     text-align: center;
     color: #fff;
     background: #4aaaa5;
   }
 
-  
-  
+  img.portfolio-exampleImage {
+      margin-bottom: 30px;
+  }
   
   /* Sticky footer. 
   Working well */
@@ -196,33 +161,12 @@ Need to work on Portfolio page. Refer to Darnoc. */
     }
 
 
-  @media screen and (min-width: 759px) {
-    .portfolio-example {
-        width: calc(100% / 3 - 3px);
-    }
-}
-
   @media screen and (max-width: 640px) {
    /* navbar-brand, my name block filling more of the space nicely*/
    a.navbar-brand {
     display: block;
     width: 75%;
 }
-  
-
-
-  /* Portfolio. Needs work still. */
-  div.portfolio-example {
-    width: 100%;
-  }
-  
-  div.portfolio-example {
-    display: block;
-    width: 299px;
-    align-content: center;
-    margin: 15px auto;
-    position: relative;
-  }
   
   /* About me */
   .AboutMeContainer h2 {
@@ -236,19 +180,6 @@ Need to work on Portfolio page. Refer to Darnoc. */
   .AboutMeContainer {
     clear: both;
   }
-
- /* Contact form is fine as is. */
- 
   }
-
-  @media screen and (min-width: 500px) {
-    .portfolio-example {
-        display: inline-block;
-        width: calc(100% / 2 - 2px);
-        margin: 15px;
-    }
-    
-}
-
 
 
