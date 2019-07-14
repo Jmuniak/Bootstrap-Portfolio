@@ -40,8 +40,6 @@
     color: #4aaaa5;
   }
   
- 
-
   /* Name */
   
   a.navbar-brand {
@@ -132,6 +130,17 @@ h3.pexample-label {
   img.portfolio-exampleImage {
       margin-bottom: 30px;
   }
+
+  a.portfolioLink {
+    position: absolute;
+    display: block;
+    bottom: 1px;
+    width: 200px;
+    text-align: center;
+    color: #fff;
+    background: #4aaaa5;
+  }
+
   
   /* Sticky footer. 
   Working well */
